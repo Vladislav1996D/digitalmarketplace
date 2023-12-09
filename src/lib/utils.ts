@@ -1,4 +1,5 @@
 import { type ClassValue, clsx } from 'clsx'
+import { Metadata } from 'next'
 import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
@@ -8,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 export function formatPrice(
   price: number | string,
   options: {
-    currency?: 'USD' | 'EUR' | 'GBP' | 'BTD'
+    currency?: 'USD' | 'EUR' | 'GBP' | 'BDT'
     notation?: Intl.NumberFormatOptions['notation']
   } = {}
 ) {
@@ -16,7 +17,7 @@ export function formatPrice(
 
   const numericPrice = typeof price === 'string' ? parseFloat(price) : price
 
-  return new Intl.NumberFormat('en-Us', {
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency,
     notation,
