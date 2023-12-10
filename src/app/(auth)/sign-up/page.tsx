@@ -40,7 +40,7 @@ const Page = () => {
       toast.error('Something went wrong. Please try again.')
     },
     onSuccess: () => {
-      toast.success('Sign-up was successful!')
+      toast.success('Signed up successfully')
       router.push('/sign-in')
     },
   })

@@ -1,4 +1,4 @@
-export const PRODUCT__CATEGORIES = [
+export const PRODUCT_CATEGORIES = [
   {
     label: 'UI Kits',
     value: 'ui_kits' as const,
